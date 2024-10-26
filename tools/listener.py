@@ -32,12 +32,12 @@ logging.basicConfig(
 logger = logging.getLogger()
 
 # Set up the serial connection
-ser = serial.Serial(args.port, args.baudrate, timeout=3)
+ser = serial.Serial(args.port, args.baudrate, timeout=1)
 buffer = bytearray()  # Buffer to store incoming bytes until a full frame is received
 
 while True:
     # Read incoming bytes
-    data = ser.read(1024)
+    data = ser.read(8)
     if not data:
         continue
 
@@ -45,6 +45,7 @@ while True:
 
     # Append data to buffer
     buffer.extend(data)
+    logger.debug(f"Current buffer size: {len(buffer)}")
     logger.debug(f"(Buffer: {buffer})")
 
     # Check for delimiter (0x00), which marks the end of a COBS frame

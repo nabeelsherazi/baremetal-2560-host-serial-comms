@@ -28,4 +28,6 @@ pip3 install -r tools/requirements.txt
 python3 tools/listener.py # add --debug for more verbosity
 ```
 
-you should see "hello world!" being depayloaded, parsed, and printed
+you should see "hello world!" being depayloaded, parsed, and printed, as well as the onboard LED blinking once a second.
+
+if there's an encoding or payloading error, the onboard led will blink faster, at 10 times a second.
