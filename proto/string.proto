@@ -1,0 +1,9 @@
+// Message containing just a string payload with a maximum length of 64 bytes.
+
+syntax = "proto3";
+
+import "nanopb.proto";
+
+message StringMessage {
+    string payload = 1 [(nanopb).max_length = 64];
+}

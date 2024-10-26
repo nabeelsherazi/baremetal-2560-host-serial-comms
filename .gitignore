@@ -1,2 +1,10 @@
+# Build artifacts
 firmware.elf
 firmware.hex
+# Do not commit generated files
+generated/
+# Protobuf Python generated files
+tools/*_pb2.py
+# Compiled Python files
+*.pyc
+*__pycache__/

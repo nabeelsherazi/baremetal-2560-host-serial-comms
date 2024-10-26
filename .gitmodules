@@ -2,3 +2,6 @@
 	path = external/nanopb
 	url = https://github.com/nanopb/nanopb/
 	commit = 98bf4db
+[submodule "external/cobs-c"]
+	path = external/cobs-c
+	url = https://github.com/cmcqueen/cobs-c

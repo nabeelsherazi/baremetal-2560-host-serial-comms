@@ -14,7 +14,8 @@
                 "-Os",
                 "-DF_CPU=16000000UL",
                 "-mmcu=atmega2560",
-                "-DBAUD=115200"
+                "-DBAUD=9600",
+                "-Iexternal"
             ]
         }
     ],
