@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux-AVR",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/avr-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "linux-gcc-arm",
+            "compilerArgs": [
+                "-Os",
+                "-DF_CPU=16000000UL",
+                "-mmcu=atmega2560",
+                "-DBAUD=115200"
+            ]
+        }
+    ],
+    "version": 4
+}
