@@ -21,7 +21,12 @@ void UART_Init(void) {
   UCSR0A &= ~(_BV(U2X0));
 #endif
   UCSR0C = _BV(UCSZ01) | _BV(UCSZ00);  // 8-bit data
-  UCSR0B = _BV(RXEN0) | _BV(TXEN0);    // Enable RX and TX
+
+  // Configure even parity
+  UCSR0C |= _BV(UPM01);
+  UCSR0C &= ~(_BV(UPM00));
+
+  UCSR0B = _BV(RXEN0) | _BV(TXEN0);  // Enable RX and TX
 }
 
 int UART_PutChar(char c, FILE* stream) {

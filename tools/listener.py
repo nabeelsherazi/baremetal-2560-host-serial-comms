@@ -32,7 +32,7 @@ logging.basicConfig(
 logger = logging.getLogger()
 
 # Set up the serial connection
-ser = serial.Serial(args.port, args.baudrate, timeout=1)
+ser = serial.Serial(args.port, args.baudrate, timeout=1, parity=serial.PARITY_EVEN)
 buffer = bytearray()  # Buffer to store incoming bytes until a full frame is received
 
 while True:
